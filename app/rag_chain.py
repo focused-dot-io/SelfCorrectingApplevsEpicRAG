@@ -3,7 +3,7 @@ from typing import TypedDict
 from langchain_core.runnables import RunnableParallel
 from app.prompt import ANSWER_PROMPT
 from modules.llm import llm
-from modules.doc_retriever import vector_store
+from modules.vector_store import vector_store
 
 
 class RagInput(TypedDict):
