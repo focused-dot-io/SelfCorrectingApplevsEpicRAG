@@ -1443,6 +1443,21 @@ files = [
 six = "*"
 
 [[package]]
+name = "langgraph"
+version = "0.0.50"
+description = "langgraph"
+optional = false
+python-versions = "<4.0,>=3.9.0"
+files = [
+    {file = "langgraph-0.0.50-py3-none-any.whl", hash = "sha256:a65c929118f026e5548aba36b6828cec630e7b20fd6fa9b6482a78aa86f53d74"},
+    {file = "langgraph-0.0.50.tar.gz", hash = "sha256:9cee33b1bdf107fb77b9d6fd7bb8d8d770273472f328bf1314bf32f401e37a64"},
+]
+
+[package.dependencies]
+langchain-core = ">=0.1.52,<0.3"
+uuid6 = ">=2024.1.12,<2025.0.0"
+
+[[package]]
 name = "langsmith"
 version = "0.1.59"
 description = "Client library to connect to the LangSmith LLM Tracing and Evaluation Platform."
@@ -4380,6 +4395,17 @@ socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
+name = "uuid6"
+version = "2024.1.12"
+description = "New time-based UUID formats which are suited for use as a database key"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "uuid6-2024.1.12-py3-none-any.whl", hash = "sha256:8150093c8d05a331bc0535bc5ef6cf57ac6eceb2404fd319bc10caee2e02c065"},
+    {file = "uuid6-2024.1.12.tar.gz", hash = "sha256:ed0afb3a973057575f9883201baefe402787ca5e11e1d24e377190f0c43f1993"},
+]
+
+[[package]]
 name = "wrapt"
 version = "1.16.0"
 description = "Module for decorators, wrappers and monkey patching."
@@ -4564,4 +4590,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<3.12"
-content-hash = "aa2fb159d4f56f78485b0816db72db7e40761fe4b04ae368556a48f3e36951e1"
+content-hash = "b1c416a1058c72404fd8619d8fb44e341cd4aea767cd8d080ce2eb28f6128405"

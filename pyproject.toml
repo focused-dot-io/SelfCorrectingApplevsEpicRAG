@@ -24,6 +24,7 @@ psycopg = "^3.1.19"
 langsmith = "^0.1.59"
 langchainhub = "^0.1.15"
 langchain-openai = "^0.1.7"
+langgraph = "^0.0.50"
 
 
 [build-system]

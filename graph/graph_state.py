@@ -17,4 +17,4 @@ class GraphState(TypedDict):
     question: str
     num_times_retrieved_docs: int
     documents: List[Document]
-    are_docs_relevant: bool
+    num_original_docs: int
