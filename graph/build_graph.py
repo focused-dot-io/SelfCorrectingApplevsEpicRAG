@@ -1,7 +1,7 @@
 from langgraph.graph import END, StateGraph
 from graph.graph_state import GraphState
-from retrievers.get_relevant_docs import get_relevant_docs
-from retrievers.retrieve_docs import retrieve
+from document_retrievers.get_relevant_docs import get_relevant_docs
+from document_retrievers.retrieve_docs import retrieve
 
 workflow = StateGraph(GraphState)
 

@@ -1,4 +1,4 @@
-from retrievers.grade_document import grade_document
+from document_retrievers.grade_document import grade_document
 
 
 def get_relevant_docs(state):
