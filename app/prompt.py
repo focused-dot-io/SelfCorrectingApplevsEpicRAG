@@ -13,7 +13,7 @@ relevancy_template = """
 Given the query: {question}
 And the document: {evaluated_doc}
 
-Is this document relevant to the query? Grade the document. Here's the rubric:
+Is this document relevant to the query? Grade the document. Here's the grading rubric:
 F: The document is completely unrelated to the question.
 D: The document has minor relevance but does not align with the question.
 C: The document has moderate relevance but contains inaccuracies.
