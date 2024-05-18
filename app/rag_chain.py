@@ -1,18 +1,9 @@
 from operator import itemgetter
 from typing import TypedDict
-from dotenv import load_dotenv
 from langchain_core.runnables import RunnableParallel
-from langchain_openai import ChatOpenAI
-from app.doc_retriever import vector_store
 from app.prompt import ANSWER_PROMPT
-
-load_dotenv()
-
-llm = ChatOpenAI(
-    temperature=0,
-    model='gpt-4-1106-preview',
-    streaming=True
-)
+from modules.llm import llm
+from modules.doc_retriever import vector_store
 
 
 class RagInput(TypedDict):
