@@ -10,6 +10,7 @@ def get_relevant_docs(state: dict) -> dict:
 
     question = state["question"]
     docs = state["documents"]
+    num_times_retrieved_docs = state["num_times_retrieved_docs"]
     graded_docs = []
 
     for doc in docs:
@@ -22,5 +23,6 @@ def get_relevant_docs(state: dict) -> dict:
 
     return {
         **state,
+        "num_times_retrieved_docs": 1 if num_times_retrieved_docs is None else num_times_retrieved_docs + 1,
         "documents": graded_docs
     }

@@ -11,7 +11,7 @@ class GraphState(TypedDict):
         question: question
         num_times_retrieved_docs: Number of times we have tried to retrieve docs
         documents: list of documents
-        are_docs_relevant: whether we have documents relevant to question
+        num_original_docs: how many docs we originally retrieved
     """
 
     question: str

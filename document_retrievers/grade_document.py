@@ -1,19 +1,10 @@
 from operator import itemgetter
-from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_core.runnables import RunnableParallel
-from pytesseract import Output
-
+from langchain_core.runnables.utils import Output
+from document_retrievers.document_grade import DocumentGrade
 from document_retrievers.relevancy_prompt import RELEVANCY_PROMPT
 from modules.llm import llm
 from langchain.docstore.document import Document
-
-
-class DocumentGrade(BaseModel):
-    """Letter grade to determine relevancy of a document"""
-
-    grade: str = Field(
-        description="Document grade for relevancy, 'A', 'B', 'C', 'D', or 'F'",
-    )
 
 
 def grade_document(question: str, doc: Document) -> Output:
