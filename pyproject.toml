@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "selfcorrectingapplevsepicrag"
+version = "0.1.0"
+description = ""
+authors = ["sarah.kainec <sarah.kainec@focusedlabs.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+python-dotenv = "^1.0.0"
+pgvector = "^0.2.4"
+langchain-experimental = "^0.0.49"
+tqdm = "^4.66.4"
+unstructured = {extras = ["pdf"], version = "^0.12.2"}
+pdfminer-six = "^20231228"
+pillow = "^10.3.0"
+pillow-heif = "^0.16.0"
+opencv-python = "^4.9.0.80"
+pdf2image = "^1.17.0"
+poppler-utils = "^0.1.0"
+openai = "^1.30.1"
+tiktoken = "^0.7.0"
+psycopg = "^3.1.19"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

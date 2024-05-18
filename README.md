@@ -1,1 +1,1 @@
-# SelfCorrectingApplevsEpicRAG
+# Self Correcting Apple vs Epic RAG
