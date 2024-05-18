@@ -1,7 +1,7 @@
 from modules.vector_store import vector_store
 
 
-def retrieve(state):
+def retrieve(state: dict) -> dict:
     """
     Retrieves the documents from the doc store
     :param state: The current graph state
