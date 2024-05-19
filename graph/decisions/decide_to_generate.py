@@ -8,7 +8,7 @@ def decide_to_generate(state: dict) -> str:
     print(f'percent of relevant docs {len(filtered_docs) / num_original_docs}')
 
     if len(filtered_docs)/num_original_docs >= .5:
-        return "generate"
+        return "generate_answer"
     elif num_times_retrieved_docs > 1:
         return "ask_the_internet"
     else:

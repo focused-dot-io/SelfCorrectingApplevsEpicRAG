@@ -1,3 +1,4 @@
+from langchain import hub
 from langchain_core.prompts import ChatPromptTemplate
 
 template = """
@@ -7,4 +8,7 @@ Answer given the following context:
 Question: {question}
 """
 
-ANSWER_PROMPT = ChatPromptTemplate.from_template(template)
+CUSTOM_PROMPT = ChatPromptTemplate.from_template(template)
+
+
+ANSWER_PROMPT = hub.pull("rlm/rag-prompt")

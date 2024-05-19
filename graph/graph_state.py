@@ -18,3 +18,4 @@ class GraphState(TypedDict):
     num_times_retrieved_docs: int
     documents: List[Document]
     num_original_docs: int
+    answer: str
