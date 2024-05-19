@@ -7,6 +7,7 @@ from document_retrievers.get_relevant_docs import get_relevant_docs
 from document_retrievers.retrieve_docs import retrieve
 from query_transformer.query_transformer import query_transformer
 
+graph_nodes = ["retrieve", "get_relevant_docs", "transform_query", "generate_answer", "ask_the_internet"]
 workflow = StateGraph(GraphState)
 
 workflow.add_node("retrieve", retrieve)
