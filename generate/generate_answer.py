@@ -6,8 +6,8 @@ async def generate_answer(state: dict) -> dict:
     question = state["question"]
 
     answer = await ask_chat(docs, question)
-
     return {
         **state,
-        "answer": answer
+        "answer": answer["answer"].content,
+        "sources": answer["docs"]
     }

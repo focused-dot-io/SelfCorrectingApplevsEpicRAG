@@ -5,7 +5,7 @@ def decide_to_generate(state: dict) -> str:
     filtered_docs = state["documents"]
     num_times_retrieved_docs = state["num_times_retrieved_docs"]
 
-    print(f'percent of relevant docs {len(filtered_docs) / num_original_docs}')
+    print(f'Percent of docs which are relevant {(len(filtered_docs) / num_original_docs)*100}%\n')
 
     if len(filtered_docs)/num_original_docs >= .5:
         return "generate_answer"

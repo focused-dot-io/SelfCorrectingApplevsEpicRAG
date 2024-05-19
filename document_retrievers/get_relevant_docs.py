@@ -19,7 +19,7 @@ def get_relevant_docs(state: dict) -> dict:
         if grade.grade in ('A', 'B'):
             graded_docs.append(doc)
 
-    print(f'Number of docs passing with grade A or B: {len(graded_docs)}')
+    print(f'Number of docs passing with grade A or B: {len(graded_docs)}\n')
 
     return {
         **state,

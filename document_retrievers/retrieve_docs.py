@@ -12,7 +12,7 @@ def retrieve(state: dict) -> dict:
 
     docs = vector_store.similarity_search(query=question, k=5)
 
-    print(f'Number of docs found: {len(docs)}')
+    print(f'Number of docs found: {len(docs)}\n')
 
     return {
         **state,
