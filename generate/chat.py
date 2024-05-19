@@ -7,7 +7,6 @@ from modules.llm import llm
 
 
 async def ask_chat(docs: List[Document], question: str) -> str:
-
     rag_chain = (RunnableParallel(
         context=itemgetter("context"),
         question=itemgetter("question")

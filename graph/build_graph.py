@@ -27,7 +27,7 @@ workflow.add_conditional_edges(
     }
 )
 workflow.add_edge("transform_query", "retrieve")
-workflow.add_edge("ask_the_internet", END)
+workflow.add_edge("ask_the_internet", "generate_answer")
 workflow.add_edge("generate_answer", END)
 
 workflow.set_entry_point("retrieve")

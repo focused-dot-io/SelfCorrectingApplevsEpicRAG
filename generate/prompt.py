@@ -10,5 +10,4 @@ Question: {question}
 
 CUSTOM_PROMPT = ChatPromptTemplate.from_template(template)
 
-
 ANSWER_PROMPT = hub.pull("rlm/rag-prompt")

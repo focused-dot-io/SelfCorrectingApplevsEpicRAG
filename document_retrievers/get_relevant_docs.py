@@ -2,12 +2,6 @@ from document_retrievers.grade_document import grade_document
 
 
 def get_relevant_docs(state: dict) -> dict:
-    """
-    Only retrieves the documents that get a grade of A or B, (C, D, F grades are dropped)
-    :param state: The current graph state
-    :return: New keys added to state, documents, and retrieved docs
-    """
-
     question = state["question"]
     docs = state["documents"]
     num_times_retrieved_docs = state["num_times_retrieved_docs"]

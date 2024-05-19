@@ -1,7 +1,7 @@
 import asyncio
 from graph.build_graph import app_workflow, graph_nodes
 
-question = {"question": "Who won the apple v epic lawsuit?"}
+question = {"question": "What are the highlights of the last apple update?"}
 
 
 async def apple_v_epic_workflow(inputs: dict) -> dict:
