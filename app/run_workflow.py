@@ -1,7 +1,7 @@
 import asyncio
-from graph.build_graph import app_workflow, graph_nodes
+import os
 
-question = {"question": "What are the highlights of the last apple update?"}
+from graph.build_graph import app_workflow, graph_nodes
 
 
 async def apple_v_epic_workflow(inputs: dict) -> dict:
@@ -22,10 +22,20 @@ async def apple_v_epic_workflow(inputs: dict) -> dict:
                 print(source.metadata["source"])
 
 
-def main():
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(apple_v_epic_workflow(question))
+def main(question: str):
+    loop = asyncio.new_event_loop()
+    loop.run_until_complete(apple_v_epic_workflow({"question": question}))
     loop.close()
 
 
-main()
+if __name__ == "__main__":
+    print("\t**********************************************")
+    print("\t***            Apple v Epic Q&A            ***")
+    print("\t**********************************************")
+    print("\nAsk a question regarding the Apple vs. Epic lawsuit:")
+    question = input()
+
+    while question.lower() != "q":
+        main(question)
+        print("\nDo you want to ask another question? Enter q to quit.")
+        question = input()
