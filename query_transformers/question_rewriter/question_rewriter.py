@@ -1,7 +1,7 @@
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables.utils import Output
 from modules.llm import llm
-from query_transformer.rewriting_prompt import REWRITING_PROMPT
+from query_transformers.question_rewriter.rewriting_prompt import REWRITING_PROMPT
 
 
 def question_rewriter(question: str) -> Output:
