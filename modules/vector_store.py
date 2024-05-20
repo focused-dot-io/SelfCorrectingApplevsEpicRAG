@@ -10,4 +10,5 @@ vector_store = PGVector(
     collection_name=PG_COLLECTION_NAME,
     connection_string=os.getenv("POSTGRES_URL"),
     embedding_function=OpenAIEmbeddings(model=EMBEDDING_MODEL),
+    use_jsonb=True,
 )

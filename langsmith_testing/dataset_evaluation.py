@@ -18,6 +18,11 @@ def predict(inputs: dict) -> dict:
 
 
 def format_evaluator_inputs(run: Run, example: Example):
+    # return StringEvaluatorInput(
+    #     input=example.inputs["inputs"],
+    #     prediction=run.outputs.values(),
+    #     reference=example.outputs["expected"],
+    # )
     return {
         "input": example.inputs["inputs"],
         "prediction": next(iter(run.outputs.values())),
