@@ -1,12 +1,12 @@
 import asyncio
-import os
 
 from graph.build_graph import app_workflow, graph_nodes
 
 
-async def apple_v_epic_workflow(inputs: dict) -> dict:
+async def apple_v_epic_workflow(question_asked: str) -> dict:
     node = ""
-    async for event in app_workflow.astream_events(inputs, version="v1"):
+    answer = ""
+    async for event in app_workflow.astream_events({"question": question_asked}, version="v1"):
         kind = event["event"]
         step_name = event["name"]
         node = step_name if step_name in graph_nodes else node
@@ -16,15 +16,18 @@ async def apple_v_epic_workflow(inputs: dict) -> dict:
             if content and node == "generate_answer":
                 print(content, end="")
         elif kind == "on_chain_end" and step_name == "generate_answer":
+            answer = event["data"]["output"]
             sources = event["data"]["output"]["sources"]
             print("\n\nSOURCES:")
             for source in sources:
                 print(source.metadata["source"])
 
+    return answer
 
-def main(question: str):
+
+def main(question_asked: str):
     loop = asyncio.new_event_loop()
-    loop.run_until_complete(apple_v_epic_workflow({"question": question}))
+    loop.run_until_complete(apple_v_epic_workflow(question_asked))
     loop.close()
 
 

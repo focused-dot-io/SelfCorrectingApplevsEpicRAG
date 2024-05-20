@@ -2,7 +2,7 @@ from operator import itemgetter
 from typing import List
 from langchain.docstore.document import Document
 from langchain_core.runnables import RunnableParallel
-from generate.prompt import ANSWER_PROMPT
+from generate.chat_prompt import ANSWER_PROMPT
 from modules.llm import llm
 
 

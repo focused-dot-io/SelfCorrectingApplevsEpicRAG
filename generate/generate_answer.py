@@ -1,4 +1,4 @@
-from generate.chat import ask_chat
+from generate.ask_chat import ask_chat
 
 
 async def generate_answer(state: dict) -> dict:
