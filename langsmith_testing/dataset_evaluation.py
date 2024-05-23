@@ -18,15 +18,10 @@ def predict(inputs: dict) -> dict:
 
 
 def format_evaluator_inputs(run: Run, example: Example):
-    # return StringEvaluatorInput(
-    #     input=example.inputs["inputs"],
-    #     prediction=run.outputs.values(),
-    #     reference=example.outputs["expected"],
-    # )
     return {
-        "input": example.inputs["inputs"],
-        "prediction": next(iter(run.outputs.values())),
-        "reference": example.outputs["expected"],
+        "input": example.inputs["question"],
+        "prediction": run.outputs['answer'],
+        "reference": example.outputs['answer'],
     }
 
 
@@ -42,7 +37,7 @@ test_results = evaluate(
     data=data_set,
     evaluators=Sequence[correctness_evaluator],
     experiment_prefix="Test",
-    max_concurrency=3
+    max_concurrency=1
 )
 
 print(test_results)
